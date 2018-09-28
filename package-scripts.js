@@ -164,6 +164,10 @@ module.exports = {
         script: 'node tooling/catchup.js && yarn install',
         description: 'Catch up with deployed version'
       }
+    },
+    everything: {
+      script: parallel('docs.dev', 'manage.dev', 'sandbox.dev'),
+      description: 'Start a bunch of things for dev environment'
     }
   }
 }
